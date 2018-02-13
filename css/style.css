@@ -1,0 +1,91 @@
+/* selektor uniwersalny "*", łapie wszystkie elementy na stronie */
+
+* {
+    margin: 0;
+}
+
+/* selektor znacznika - lapie WSZYSTKIE wystapienia danego znacznika na stronie */
+
+/*
+p {
+    margin: 5px;
+}
+*/
+
+/* selektor klasy".". lapie elementy z podana klasa */
+
+.green {
+    color: green;
+}
+
+.blue {
+    color: blue;
+}
+
+/*pozycjonowanie*/
+
+/*zmieniajac pozycje na inna niz statis )statysczna) otrzymujemy  dostep do wlsciwosci top, left, right, bottom. oznaczaja on: "odsun od kierunku krawedzi o:"*/
+
+.bgGreen {
+    background-color: green;
+    height: 400px;
+    color: white;
+    position: relative;
+}
+
+.bgRed {
+    background-color: red;
+/*    height: 10px;*/
+
+    /*    pozycjq reltywna odsuwa element od krawedzitop, left, right, bottom o podana jednostke wzgledem miejsca, w ktorym normalnie by sie znajdowal*/
+    
+/*
+    pozycjonowanie anbsolutne odbywa się wzgledem elementu rodzica, ktory jest w pozycji relatywnej (jezeli nie ma takiego elementu, to ustawia sie wzgledem elementu body) 
+    Ustawiajac pozycje absolutna, mimo, ze jest to element blokowy (display:block), element dostosowuje sie do contentu
+*/
+    position: absolute;
+    top: 60px;
+    left: 30px;
+}
+
+/*position relative*/
+
+.bgBlue {
+    background-color: blue;
+}
+
+/*relatywna w relatywnej*/
+
+/*grupowanie selektorow po przecinku ","*/
+
+.relative,
+.relative-inner {
+    position: relative;
+}
+
+.relative {
+    background-color: yellow;
+    height: 400px;
+}
+
+.relative-inner {
+    background-color: pink;
+    height: 50%;
+    width: 50%;
+    top: 100px;
+    left: 25%;
+}
+
+/*position: fixed - pozwala na ustawienie elementu wzgledem OKNA PRZEGLADARKI*/
+
+#main-nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 99999;
+}
+
+#selektor-uniwersalny {
+    margin-top: 90px;
+}
