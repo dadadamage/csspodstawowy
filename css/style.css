@@ -113,3 +113,94 @@ p {
 #procenty {
     width: 50%;
 }
+
+#main-header {
+    height: 100vh;
+    background-color:beige;
+}
+/*pasek ma zazwyczaj szerokość 12 pikseli jednostek*/
+/*calc - liczenie, aby używać vh, najlepiej odjąć pasek szerokości*/
+/*rgba do przezroczystych*/
+
+/*pseudoelementy*/
+#main-nav ul {
+    list-style-type: none;
+}
+
+#main-nav ul li::before {
+    font-family: FontAwesome;
+    content: '\f2dd';
+}
+
+/*pseudoelementy są składowymi elementow*/
+/*pseudoelement nie istnieje bez kontentu*/
+
+#main-header h1 {
+    line-height: 100vh;
+    text-align: center;
+    position: relative;
+}
+
+#main-header h1::before,
+#main-header h1::after {
+    content:'';
+    display: inline-block;
+    width: 20%;
+    border-top: 2px solid blue;
+    position: absolute;
+    top: 50%;  
+}
+
+#main-header h1::before {
+    left:10%;
+}
+
+#main-header h1::after {
+    right: 10%
+}
+
+/*pseudoklasy - po akcji uzytkownika, lub gdy maja okreslone miejsce w strukturze*/
+#main-nav ul .list-item:first-child a {
+    color: red
+}
+
+#main-nav ul .list-item:last-child a {
+    color: red
+}
+
+/*hover - kiedy myszka nad */
+#main-nav ul .list-item a:hover {
+    text-decoration: none;
+    color: violet;
+}
+
+form input:focus {
+    border: 5px solid blue;
+}
+
+/* :visited okresla stan odwiedzonego linka */
+#main-nav ul .list-item a:visited {
+    color: gray;
+} 
+
+/* nth-of */
+/*nth-child lapie dziecko o okreslonym selektorze, tylko wtedy, kiedy jes na okreslonym miejscu*/
+
+#dzieci p:nth-child(3) {
+    background-color: aqua;
+}
+
+/*nth-of-type lapie selektor o okreslonym typie*/
+#dzieci p:nth-of-type(odd) {
+    background-color: aqua;
+}
+
+/*nth-last-of-type lapie zaczyna numerowanie elementow od konca*/
+#dzieci p:nth-of-type(odd) {
+    background-color: aqua;
+}
+
+/*an+b , a - oznacza co ile elementow przeskakujemy, b - oznacza od ktorego elementu zaczynamy*/
+#dzieci p:nth-of-type(3n+1) {
+    background-color: violet;
+}
