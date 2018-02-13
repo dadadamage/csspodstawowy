@@ -84,8 +84,32 @@ p {
     top: 0;
     width: 100%;
     z-index: 99999;
+    background-color: aqua;
 }
 
 #selektor-uniwersalny {
     margin-top: 90px;
+}
+
+/*jednostki miary*/
+#jednostki-miary {
+    font-size: 30px
+    
+}
+
+#jednostki-miary > div {
+    background-color: aquamarine;
+    margin: 10px 0 10px 0;
+}
+
+#piksele {
+    width: 400px;
+}
+
+#em {
+    width: 20em;
+}
+
+#procenty {
+    width: 50%;
 }
